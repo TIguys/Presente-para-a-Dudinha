@@ -1,1 +1,908 @@
+SPECIFICATION — PROJETO PARA SEMPRE
+Plataforma privada de relacionamento — Gustavo & Dudinha
+Nome do projeto: Para Sempre
+Tipo: Website multipage, privado e responsivo.
+Objetivo: Criar um espaço digital exclusivo para Gustavo e Dudinha, onde ambos possam compartilhar músicas, fotos, lembranças, cartas, anotações, sonhos e experiências.
 
+1. IDENTIDADE VISUAL E CONCEITO
+Desenvolva um site moderno, romântico, elegante e personalizado, com aparência de uma plataforma premium.
+
+O projeto deverá transmitir intimidade, carinho, nostalgia e personalidade, sem parecer um site genérico de relacionamento.
+
+1.1 Logotipo
+Utilizar como logotipo principal a imagem fornecida:
+
+https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ46Ibng4-ZfI4jg3SZvgaKqk3BgSXlYm-2zzX8sfBoEMeOdyBJaWFfwiaZ&s=10
+
+Preservar a identidade visual original da imagem.
+
+Não substituir por um logotipo genérico.
+
+Utilizar o logotipo na tela de login, cabeçalho e demais locais apropriados.
+
+Caso a imagem não carregue, apresentar um espaço reservado para substituição.
+
+1.2 Tipografia
+Utilizar bibliotecas de fontes, preferencialmente Google Fonts.
+
+Sugestões:
+
+Playfair Display: títulos elegantes.
+
+Poppins: textos e elementos de interface.
+
+Great Vibes: pequenos detalhes românticos.
+
+Montserrat: elementos secundários.
+
+As fontes podem variar entre as duas áreas pessoais, desde que mantenham uma identidade visual harmoniosa.
+
+1.3 Ícones
+NÃO UTILIZAR EMOJIS OU EMOTICONS COMO ÍCONES DA INTERFACE.
+
+Utilizar exclusivamente bibliotecas profissionais de ícones, como:
+
+Font Awesome.
+
+Lucide Icons.
+
+Bootstrap Icons.
+
+Os ícones devem possuir tamanho consistente, boa legibilidade e aparência minimalista.
+
+2. ESTRUTURA DO SITE — MULTIPAGE
+O projeto deverá possuir três áreas principais:
+
+Tela de Login.
+
+Área pessoal do Gustavo (Darling).
+
+Área pessoal da Dudinha.
+
+Cada área pessoal deverá possuir identidade visual própria, navegação independente e conteúdo personalizado.
+
+Não desenvolver as áreas pessoais como simples abas de uma mesma página. Implementar estrutura multipage, com rotas próprias.
+
+Rotas sugeridas
+/login — autenticação.
+
+/gustavo — área pessoal do Gustavo.
+
+/dudinha — área pessoal da Dudinha.
+
+O acesso direto às rotas pessoais deverá exigir autenticação válida.
+
+3. SISTEMA DE LOGIN E SEGURANÇA
+Criar uma tela de login sofisticada, minimalista e romântica.
+
+3.1 Design da tela
+A tela deverá apresentar:
+
+Logotipo Para Sempre centralizado.
+
+Título: “Para Sempre”.
+
+Subtítulo: “Um lugar só nosso.”
+
+Campo de usuário.
+
+Campo de senha.
+
+Botão “Entrar”.
+
+Ícone para visualizar ou ocultar a senha.
+
+Mensagem de erro para credenciais incorretas.
+
+Animações suaves de entrada.
+
+3.2 Contas autorizadas
+Criar previamente apenas as duas contas abaixo.
+
+Conta 1 — Gustavo
+
+Usuário: Darling
+
+Senha inicial: Gu527723*
+
+Destino após login: /gustavo
+
+Conta 2 — Dudinha
+
+Usuário: Dudinha
+
+Senha inicial: DudaSilva2812
+
+Destino após login: /dudinha
+
+3.3 Regras obrigatórias de autenticação
+Não apresentar nomes de usuários ou senhas na tela de login.
+
+Não mostrar as credenciais em mensagens de erro.
+
+Não disponibilizar botão de cadastro.
+
+Não permitir criação de novas contas.
+
+Não permitir exclusão ou gerenciamento de usuários pela interface.
+
+Não permitir que um usuário acesse a área pessoal do outro.
+
+Não permitir acesso às páginas internas sem autenticação.
+
+Implementar botão de sair da conta.
+
+Manter a sessão de maneira segura.
+
+Criar proteção contra tentativas excessivas de login.
+
+SEGURANÇA IMPORTANTE: Como o projeto será hospedado no GitHub, não armazenar senhas em arquivos HTML, CSS, JavaScript, JSON ou variáveis expostas no navegador. Implementar autenticação por backend ou serviço como Supabase Auth, com contas previamente provisionadas, credenciais protegidas e políticas de acesso. Desabilitar o cadastro público. Nunca enviar senhas para o GitHub.
+
+4. ÁREA PESSOAL DO GUSTAVO — DARLING
+Identidade visual: Azul-escuro.
+
+Paleta sugerida:
+
+Fundo principal: #071629.
+
+Fundo secundário: #0D223D.
+
+Destaques: #4A90E2.
+
+Texto principal: #F4F7FB.
+
+Texto secundário: #A8B8CC.
+
+A interface deverá apresentar um visual sofisticado, com elementos em azul, cartões arredondados, transparências sutis e animações discretas.
+
+4.1 Cabeçalho
+Exibir:
+
+Logotipo Para Sempre.
+
+Saudação: “Bem-vindo, Darling.”
+
+Pequena descrição: “Nosso cantinho, nossas histórias.”
+
+Menu de navegação.
+
+Botão para sair.
+
+4.2 Painel inicial
+Criar uma página inicial com cartões que direcionem para todas as funcionalidades.
+
+Apresentar também uma mensagem em destaque:
+
+"Cada momento com você é uma lembrança que quero guardar para sempre."
+
+4.3 Área de músicas
+Criar uma seção chamada “Nossa Playlist”.
+
+Funcionalidades:
+
+Exibir todas as músicas adicionadas.
+
+Reproduzir músicas dentro do próprio site.
+
+Utilizar players incorporados do YouTube.
+
+Apresentar miniaturas das músicas.
+
+Exibir título da música.
+
+Criar organização visual em cartões.
+
+Permitir pausar e retomar a reprodução.
+
+Permitir adicionar novas músicas por URL.
+
+Atualizar a playlist automaticamente após a adição.
+
+As músicas deverão ser compartilhadas entre Gustavo e Dudinha.
+
+Playlist inicial:
+
+https://youtu.be/pqrUQrAcfo4
+
+https://youtu.be/x47TgeRJtH0
+
+https://youtu.be/Jir-WItz1OI
+
+https://youtu.be/ggG9ySCChYw
+
+https://youtu.be/eG4mIKjrOq0
+
+https://youtu.be/6IOiB1gJrqA
+
+https://youtu.be/M4uG1MmZVl0
+
+https://youtu.be/iggmiF7DNoM
+
+https://youtu.be/BI9HQCzpDgQ
+
+https://youtu.be/wbpCa2SDr_I
+
+IMPORTANTE: Não abrir o YouTube em outra página para reproduzir as músicas. Utilizar o YouTube IFrame Player API ou players incorporados, respeitando as restrições de reprodução e disponibilidade de cada vídeo.
+
+4.4 Área de bandas e artistas
+Criar uma seção chamada “Nossas Bandas”.
+
+Bandas iniciais:
+
+The Neighbourhood.
+
+Cigarettes After Sex.
+
+Arctic Monkeys.
+
+Charlie Brown Jr.
+
+Legião Urbana.
+
+Cada banda deverá possuir:
+
+Nome.
+
+Imagem ou capa.
+
+Link para pesquisar ou acessar o artista no Spotify.
+
+Cartão visual próprio.
+
+Gerar links de pesquisa do Spotify para cada artista, utilizando o formato:
+
+https://open.spotify.com/search/NOME-DO-ARTISTA
+
+Os links deverão abrir o Spotify em uma nova guia.
+
+5. FUNCIONALIDADES DE ADICIONAMENTO
+Essas funcionalidades deverão existir tanto na área do Gustavo quanto na área da Dudinha.
+
+5.1 Adicionar músicas
+Criar uma seção chamada “Adicionar Música”.
+
+O formulário deverá conter:
+
+Campo para inserir o link do YouTube.
+
+Botão “Adicionar à playlist”.
+
+Validação do endereço informado.
+
+Pré-visualização da música, quando disponível.
+
+Funcionamento:
+
+O usuário cola o link do YouTube.
+
+O sistema identifica o ID do vídeo.
+
+O sistema verifica se o endereço é válido.
+
+A música é adicionada à playlist compartilhada.
+
+A nova música aparece imediatamente nas duas áreas pessoais.
+
+Não permitir links aleatórios de sites externos como se fossem músicas do YouTube.
+
+5.2 Adicionar bandas ou músicos
+Criar uma seção chamada “Adicionar Artista”.
+
+Campos:
+
+Nome da banda ou artista.
+
+URL de uma imagem ou fotografia.
+
+Link do Spotify (opcional).
+
+Botão: “Adicionar artista”.
+
+Após adicionar, o novo artista deverá aparecer na seção de bandas das duas contas.
+
+6. ÁREA DE FOTOS
+Criar uma seção chamada “Nossas Fotografias”.
+
+Objetivo: permitir que Gustavo e Dudinha guardem fotografias e momentos especiais.
+
+Funcionalidades:
+
+Adicionar fotos do dispositivo.
+
+Exibir imagens em uma galeria organizada.
+
+Visualizar fotos em tamanho ampliado.
+
+Organizar imagens em cartões.
+
+Permitir adicionar uma legenda.
+
+Mostrar a data de publicação.
+
+Permitir excluir fotografias adicionadas pelo próprio usuário.
+
+Design:
+
+Criar uma galeria com cartões de tamanhos variados, bordas suaves e efeitos de aproximação ao passar o mouse.
+
+A galeria deverá ser privada e persistente, utilizando armazenamento de arquivos protegido.
+
+7. ÁREA DE NOTAS
+Criar uma seção chamada “Nossas Notas”.
+
+Objetivo: permitir registrar pensamentos, lembretes e pequenos acontecimentos.
+
+Funcionalidades:
+
+Criar novas notas.
+
+Editar notas existentes.
+
+Excluir notas.
+
+Inserir título.
+
+Inserir conteúdo.
+
+Registrar data de criação.
+
+Organizar por cartões.
+
+Cada usuário deverá possuir suas próprias notas privadas.
+
+8. ÁREA DE CARTAS
+Criar uma seção chamada “Cartinhas”.
+
+Essa área deverá possuir um visual especial, lembrando cartas escritas à mão.
+
+Funcionalidades:
+
+Criar cartas.
+
+Inserir título.
+
+Escrever mensagens longas.
+
+Salvar cartas.
+
+Editar cartas.
+
+Excluir cartas.
+
+Visualizar cartas em uma interface que simule papel.
+
+Utilizar fontes elegantes e detalhes visuais delicados.
+
+Criar um botão “Abrir cartinha”, com uma animação suave de abertura.
+
+Cada conta deverá possuir suas próprias cartas.
+
+9. LISTA DE ANIMES
+Criar uma seção chamada “Animes que queremos assistir”.
+
+Funcionalidades:
+
+Adicionar nome do anime.
+
+Inserir imagem ou capa.
+
+Adicionar descrição opcional.
+
+Marcar como desejado.
+
+Marcar como assistido.
+
+Editar e excluir itens.
+
+Organizar os animes em cartões com suas respectivas capas.
+
+A lista deverá ser individual para cada usuário.
+
+10. LISTA DE FILMES
+Criar uma seção chamada “Filmes que queremos assistir”.
+
+Funcionalidades:
+
+Adicionar título do filme.
+
+Adicionar imagem ou pôster.
+
+Inserir descrição opcional.
+
+Marcar como assistido.
+
+Marcar como desejado.
+
+Editar e excluir filmes.
+
+Utilizar uma interface inspirada em plataformas de streaming, com pôsteres em destaque.
+
+A lista deverá ser individual para cada usuário.
+
+11. ÁREA DE PALAVRAS ROMÂNTICAS
+Criar uma seção chamada “Palavras que ficam”.
+
+Objetivo: guardar frases, declarações, pequenos textos e palavras especiais.
+
+Funcionalidades:
+
+Adicionar frases.
+
+Escrever pequenos textos.
+
+Editar conteúdos.
+
+Excluir conteúdos.
+
+Apresentar as frases em cartões personalizados.
+
+Design:
+
+Utilizar cartões elegantes, fontes diferenciadas e pequenas animações.
+
+Permitir que cada usuário construa sua própria coleção de mensagens.
+
+12. LUGARES DO MUNDO
+Criar uma seção chamada “Nosso Mapa de Sonhos”.
+
+Objetivo: registrar lugares que Gustavo e Dudinha gostariam de conhecer juntos.
+
+Funcionalidades:
+
+Adicionar nome do lugar.
+
+Adicionar país.
+
+Inserir imagem ou fotografia.
+
+Escrever uma descrição.
+
+Marcar como visitado.
+
+Marcar como desejo futuro.
+
+Editar e excluir lugares.
+
+Design:
+
+Criar cartões de destinos com fotografias grandes, informações do local e um visual inspirado em diários de viagem.
+
+Os lugares adicionados deverão aparecer em uma coleção compartilhada entre as duas contas.
+
+13. MENSAGEM FINAL — GUSTAVO
+Na parte inferior da área pessoal do Gustavo, criar uma seção especial.
+
+Exibir em destaque:
+
+"Te amo, Dudinha."
+
+A mensagem deverá possuir:
+
+Tipografia elegante.
+
+Animação discreta.
+
+Destaque visual.
+
+Fundo diferenciado.
+
+Aparência de encerramento da página.
+
+Adicionar uma pequena frase abaixo:
+
+“Você faz parte das minhas melhores histórias.”
+
+14. ÁREA PESSOAL DA DUDINHA
+A área da Dudinha deverá possuir exatamente as mesmas funcionalidades principais da área do Gustavo.
+
+Entretanto, sua identidade visual deverá ser diferente.
+
+Identidade visual: Vermelho-escuro.
+
+Paleta sugerida:
+
+Fundo principal: #26090E.
+
+Fundo secundário: #3A1019.
+
+Destaques: #C7475A.
+
+Texto principal: #FFF5F5.
+
+Texto secundário: #D6B4BA.
+
+O design deverá ser romântico, sofisticado e delicado.
+
+14.1 Cabeçalho
+Exibir:
+
+Logotipo Para Sempre.
+
+Saudação: “Bem-vinda, Dudinha.”
+
+Descrição: “Um lugar especial para guardar nossas lembranças.”
+
+Menu de navegação.
+
+Botão para sair.
+
+14.2 Painel inicial
+Apresentar cartões para todas as funcionalidades.
+
+Mensagem em destaque:
+
+“Você é uma das partes mais bonitas da minha história.”
+
+14.3 Funcionalidades
+Implementar todas as seguintes seções:
+
+Nossa Playlist.
+
+Nossas Bandas.
+
+Adicionar Música.
+
+Adicionar Artista.
+
+Nossas Fotografias.
+
+Nossas Notas.
+
+Cartinhas.
+
+Animes que queremos assistir.
+
+Filmes que queremos assistir.
+
+Palavras que ficam.
+
+Nosso Mapa de Sonhos.
+
+As funcionalidades de músicas e bandas deverão ser compartilhadas com Gustavo.
+
+As funcionalidades de fotos, notas, cartas, animes, filmes e palavras românticas deverão possuir dados independentes por usuário.
+
+O mapa de sonhos deverá ser compartilhado.
+
+14.4 Mensagem final — Dudinha
+Na parte inferior da página, exibir:
+
+"Te amo, Darling."
+
+Abaixo, apresentar:
+
+“Que a nossa história continue sendo escrita, um momento de cada vez.”
+
+Utilizar uma apresentação visual especial, com animações delicadas.
+
+15. COMPARTILHAMENTO E ORGANIZAÇÃO DOS DADOS
+O sistema deverá diferenciar claramente os dados compartilhados e os dados individuais.
+
+Dados compartilhados
+Playlist de músicas.
+
+Bandas e artistas.
+
+Lugares que desejamos conhecer.
+
+Tudo o que for adicionado por Gustavo deverá aparecer na conta da Dudinha e vice-versa.
+
+Dados individuais
+Fotografias.
+
+Notas.
+
+Cartas.
+
+Animes.
+
+Filmes.
+
+Palavras românticas.
+
+Cada usuário terá sua própria coleção desses conteúdos.
+
+Implementar um banco de dados persistente.
+
+Tecnologia sugerida: Supabase.
+
+Utilizar:
+
+Supabase Auth para autenticação.
+
+Supabase Database para armazenamento dos registros.
+
+Supabase Storage para fotografias e imagens.
+
+Row Level Security (RLS) para controlar o acesso aos dados.
+
+As informações não poderão desaparecer ao atualizar a página, fechar o navegador ou entrar novamente na conta.
+
+16. DESIGN E EXPERIÊNCIA DO USUÁRIO
+O site deverá possuir uma experiência visual de alto nível.
+
+Requisitos de interface
+Layout responsivo.
+
+Compatibilidade com computadores, tablets e celulares.
+
+Navegação intuitiva.
+
+Transições suaves.
+
+Animações discretas.
+
+Cartões com bordas arredondadas.
+
+Efeitos de transparência moderados.
+
+Sombras suaves.
+
+Menus organizados.
+
+Estados de carregamento.
+
+Mensagens de sucesso e erro.
+
+Confirmação antes de excluir conteúdos.
+
+Menu lateral
+Nas áreas pessoais, utilizar um menu lateral retrátil contendo as principais seções.
+
+Em dispositivos móveis, transformar o menu em uma navegação adaptada para telas pequenas.
+
+Identidade entre as contas
+Apesar das diferenças de cores, ambas deverão possuir:
+
+Mesma estrutura de navegação.
+
+Mesmas funcionalidades.
+
+Mesma organização.
+
+Mesmo logotipo.
+
+Mesma identidade geral do projeto.
+
+17. TECNOLOGIAS E ARQUITETURA
+Utilizar tecnologias modernas e compatíveis com hospedagem no GitHub.
+
+Front-end
+HTML5.
+
+CSS3.
+
+JavaScript ou TypeScript.
+
+React.
+
+Vite.
+
+Bibliotecas
+Lucide React ou Font Awesome.
+
+Google Fonts.
+
+Biblioteca de animações, como Framer Motion.
+
+React Router para navegação multipage.
+
+Back-end e banco de dados
+Supabase Auth.
+
+Supabase Database.
+
+Supabase Storage.
+
+Hospedagem
+Repositório GitHub.
+
+GitHub Pages, caso a arquitetura escolhida seja compatível.
+
+Alternativamente, Vercel para hospedagem do front-end, mantendo o código no GitHub.
+
+Não colocar chaves privadas, senhas ou credenciais administrativas no repositório.
+
+As credenciais públicas necessárias para inicializar o cliente Supabase devem ser configuradas corretamente, enquanto operações privilegiadas devem permanecer no servidor.
+
+18. ORGANIZAÇÃO DOS ARQUIVOS
+Organizar o projeto de maneira profissional.
+
+Estrutura sugerida:
+
+para-sempre/
+│
+├── public/
+│   ├── logo.png
+│   └── images/
+│
+├── src/
+│   ├── assets/
+│   │
+│   ├── components/
+│   │   ├── Header.jsx
+│   │   ├── Sidebar.jsx
+│   │   ├── MusicPlayer.jsx
+│   │   ├── MusicCard.jsx
+│   │   ├── ArtistCard.jsx
+│   │   └── PhotoGallery.jsx
+│   │
+│   ├── pages/
+│   │   ├── Login.jsx
+│   │   ├── Gustavo.jsx
+│   │   ├── Dudinha.jsx
+│   │   ├── Musicas.jsx
+│   │   ├── Bandas.jsx
+│   │   ├── Fotos.jsx
+│   │   ├── Notas.jsx
+│   │   ├── Cartas.jsx
+│   │   ├── Animes.jsx
+│   │   ├── Filmes.jsx
+│   │   ├── Palavras.jsx
+│   │   └── Lugares.jsx
+│   │
+│   ├── services/
+│   │   ├── supabase.js
+│   │   └── auth.js
+│   │
+│   ├── styles/
+│   │   ├── global.css
+│   │   ├── gustavo.css
+│   │   └── dudinha.css
+│   │
+│   ├── App.jsx
+│   └── main.jsx
+│
+├── .env.example
+├── .gitignore
+├── package.json
+└── README.md
+A estrutura poderá ser adaptada conforme a necessidade técnica, mantendo a organização por componentes, páginas, serviços e estilos.
+
+19. INTEGRAÇÃO COM O STITCH AI
+Antes de implementar o código, utilizar o Stitch AI para desenvolver as interfaces visuais.
+
+Criar os seguintes layouts:
+
+Tela de login.
+
+Dashboard do Gustavo.
+
+Dashboard da Dudinha.
+
+Página de músicas.
+
+Página de bandas.
+
+Página de adicionar músicas.
+
+Página de adicionar artistas.
+
+Galeria de fotografias.
+
+Página de notas.
+
+Página de cartas.
+
+Página de animes.
+
+Página de filmes.
+
+Página de palavras românticas.
+
+Página do mapa de sonhos.
+
+Orientações para o Stitch
+Desenvolver as interfaces em alta fidelidade.
+
+Criar versões para desktop e mobile.
+
+Manter a identidade azul do Gustavo.
+
+Manter a identidade vermelha da Dudinha.
+
+Reutilizar componentes visuais.
+
+Não utilizar emojis como ícones.
+
+Utilizar imagens ilustrativas de boa qualidade.
+
+Não apresentar informações fictícias como se fossem dados reais dos usuários.
+
+Priorizar uma interface limpa e intuitiva.
+
+Após gerar as interfaces, implementar o funcionamento real das funcionalidades.
+
+20. REQUISITOS DE FUNCIONAMENTO
+O projeto não deverá ser apenas uma demonstração visual.
+
+TODAS AS FUNCIONALIDADES DEVERÃO FUNCIONAR.
+
+Verificar obrigatoriamente:
+
+Login do Gustavo.
+
+Login da Dudinha.
+
+Redirecionamento correto após autenticação.
+
+Proteção das rotas privadas.
+
+Botão de sair.
+
+Persistência de sessão.
+
+Playlist inicial carregada.
+
+Reprodução de músicas incorporadas.
+
+Adição de novas músicas.
+
+Compartilhamento da playlist.
+
+Exibição das bandas iniciais.
+
+Adição de novas bandas.
+
+Links para Spotify.
+
+Upload de fotografias.
+
+Criação e edição de notas.
+
+Criação e edição de cartas.
+
+Cadastro de animes.
+
+Cadastro de filmes.
+
+Cadastro de palavras românticas.
+
+Cadastro de lugares.
+
+Compartilhamento do mapa de sonhos.
+
+Separação dos dados individuais.
+
+Persistência no banco de dados.
+
+Responsividade.
+
+Proteção contra acessos não autorizados.
+
+21. INSTRUÇÕES FINAIS PARA A IA DESENVOLVEDORA
+Desenvolva o projeto com atenção aos detalhes.
+
+Não simplifique as funcionalidades solicitadas.
+
+Não entregue apenas telas estáticas ou protótipos sem funcionamento.
+
+Priorize a qualidade visual, a segurança, a organização do código e a experiência de navegação.
+
+Antes de finalizar:
+
+Teste os dois logins.
+
+Teste o acesso às páginas privadas.
+
+Verifique se os dados compartilhados aparecem nas duas contas.
+
+Verifique se os dados individuais permanecem separados.
+
+Teste a reprodução das músicas.
+
+Teste a adição de novos conteúdos.
+
+Verifique a versão mobile.
+
+Corrija erros de interface e funcionamento.
+
+Entregue também um README.md contendo instruções de instalação, configuração do Supabase e publicação do projeto.
+
+RESULTADO ESPERADO:
+
+Um site chamado PARA SEMPRE, com duas áreas pessoais completamente funcionais, uma azul para Gustavo (Darling) e outra vermelha para Dudinha.
+
+Uma plataforma privada, elegante, romântica e organizada, onde duas pessoas possam construir e guardar suas próprias lembranças.
+
+"Algumas histórias merecem um lugar para permanecer para sempre."
