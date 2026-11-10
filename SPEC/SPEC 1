@@ -906,3 +906,39 @@ Um site chamado PARA SEMPRE, com duas áreas pessoais completamente funcionais, 
 Uma plataforma privada, elegante, romântica e organizada, onde duas pessoas possam construir e guardar suas próprias lembranças.
 
 "Algumas histórias merecem um lugar para permanecer para sempre."
+
+
+
+
+
+ATUALIZAÇÃO OBRIGATÓRIA — BACKEND EXCLUSIVAMENTE SUPABASE
+
+O projeto PARA SEMPRE deverá utilizar exclusivamente o Supabase para todas as funcionalidades de backend.
+
+Não utilizar Firebase, MongoDB, MySQL, serviços de autenticação externos, APIs de banco de dados terceiras ou servidores próprios.
+
+Utilizar exclusivamente os seguintes recursos do Supabase:
+
+Supabase Auth: autenticação das contas Gustavo e Dudinha.
+
+Supabase Database: armazenamento de todos os dados.
+
+Supabase Storage: armazenamento de fotografias e imagens.
+
+Supabase Row Level Security (RLS): proteção e separação dos dados.
+
+Supabase Realtime: sincronização de conteúdos compartilhados, quando necessário.
+
+Manter as duas contas previamente autorizadas, sem cadastro público.
+
+Todas as operações de criação, edição, exclusão e consulta deverão utilizar o cliente oficial do Supabase.
+
+As músicas e bandas deverão ser compartilhadas entre as duas contas. Fotografias, notas, cartas, animes, filmes e palavras românticas deverão permanecer individuais. Os lugares do mundo deverão ser compartilhados.
+
+Implementar políticas RLS para todas as tabelas e arquivos armazenados.
+
+Não armazenar senhas, chaves administrativas ou credenciais privadas no GitHub.
+
+Utilizar variáveis de ambiente para a URL e chave publicável do Supabase.
+
+O projeto deverá funcionar integralmente utilizando somente o Supabase como backend e banco de dados.
