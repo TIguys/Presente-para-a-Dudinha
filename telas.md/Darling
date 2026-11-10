@@ -1,1 +1,237 @@
+<!DOCTYPE html>
 
+<html class="dark" lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-error-container": "#ffdad6", "outline-variant": "#414751", "surface-container": "#122033", "on-surface": "#d5e3fe", "secondary-container": "#8d1a32", "surface-container-lowest": "#010e21", "surface-container-low": "#0d1c2f", "on-secondary-container": "#ff9da5", "on-primary-fixed": "#001c39", "on-error": "#690005", "secondary-fixed": "#ffdadb", "background": "#051427", "surface-variant": "#28354a", "on-surface-variant": "#c1c7d3", "primary": "#a4c9ff", "on-primary-fixed-variant": "#004883", "outline": "#8b919d", "on-tertiary": "#4f241c", "on-tertiary-container": "#471d15", "surface-bright": "#2c3a4e", "surface-container-high": "#1d2b3e", "on-secondary-fixed-variant": "#8a1830", "surface-tint": "#a4c9ff", "surface-container-highest": "#28354a", "error": "#ffb4ab", "on-secondary": "#67001d", "on-secondary-fixed": "#40000e", "on-primary-container": "#002a51", "inverse-surface": "#d5e3fe", "primary-fixed-dim": "#a4c9ff", "tertiary": "#fbb6a8", "tertiary-fixed-dim": "#fbb6a8", "primary-fixed": "#d4e3ff", "on-tertiary-fixed-variant": "#6a3930", "on-background": "#d5e3fe", "error-container": "#93000a", "tertiary-container": "#bf8175", "surface": "#051427", "primary-container": "#4d93e5", "on-tertiary-fixed": "#351009", "secondary-fixed-dim": "#ffb2b8", "on-primary": "#00315d", "tertiary-fixed": "#ffdad3", "secondary": "#ffb2b8", "inverse-primary": "#0060ac", "inverse-on-surface": "#233145", "surface-dim": "#051427" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-mobile": "1.25rem", "gutter": "1.5rem", "margin": "3rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "space-xl": "2.5rem", "margin-mobile": "1.25rem", "space-2xl": "4rem", "space-md": "1rem" }, "fontFamily": { "headline-sm": ["Playfair Display"], "body-md": ["Montserrat"], "headline-lg": ["Playfair Display"], "headline-md": ["Playfair Display"], "body-sm": ["Montserrat"], "headline-lg-mobile": ["Playfair Display"], "label-lg": ["Montserrat"], "title-editorial": ["Playfair Display"], "label-md": ["Montserrat"], "display": ["Playfair Display"], "display-mobile": ["Playfair Display"], "body-lg": ["Montserrat"], "label-sm": ["Montserrat"] }, "fontSize": { "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}], "body-md": ["14px", {"lineHeight": "22px", "fontWeight": "400"}], "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "500"}], "headline-md": ["28px", {"lineHeight": "36px", "fontWeight": "500"}], "body-sm": ["12px", {"lineHeight": "18px", "fontWeight": "400"}], "headline-lg-mobile": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "500"}], "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600"}], "title-editorial": ["20px", {"lineHeight": "30px", "letterSpacing": "0.01em", "fontWeight": "400"}], "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "500"}], "display": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "600"}], "display-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "body-lg": ["16px", {"lineHeight": "26px", "letterSpacing": "-0.005em", "fontWeight": "400"}], "label-sm": ["11px", {"lineHeight": "15px", "letterSpacing": "0.05em", "fontWeight": "500"}] } } } }</script><style>@layer base{html,body{width:100%;margin:0;padding:0;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}}#drawer-toggle:checked ~ #drawer-backdrop{opacity:1;pointer-events:auto;}#drawer-toggle:checked ~ #app-drawer{transform:translateX(0);}
+/* Transições suaves para alternância de tema */
+html.dark {
+  background-color: #051427;
+  color: #d5e3fe;
+}
+html:not(.dark) {
+  background-color: #f4f7fb;
+  color: #17263b;
+}
+html:not(.dark) body {
+  background-color: #f4f7fb;
+  color: #17263b;
+}
+html:not(.dark) .light-header {
+  background-color: rgba(255, 255, 255, 0.88) !important;
+  box-shadow: 0 1px 10px rgba(10, 37, 64, 0.05);
+}
+html:not(.dark) .light-card {
+  background-color: #ffffff !important;
+  border-color: #e5edf7 !important;
+  box-shadow: 0 4px 20px -2px rgba(9, 30, 66, 0.04);
+}
+html:not(.dark) .light-surface {
+  background-color: #f4f7fb !important;
+}
+html:not(.dark) .light-subcard {
+  background-color: #f7faff !important;
+}
+html:not(.dark) .light-text-main {
+  color: #0e2038 !important;
+}
+html:not(.dark) .light-text-muted {
+  color: #5c6c82 !important;
+}
+html:not(.dark) .light-accent {
+  color: #0056b3 !important;
+}
+html:not(.dark) .light-pill {
+  background-color: #ffffff !important;
+  border-color: #dbe6f5 !important;
+  color: #1a3250 !important;
+}
+html:not(.dark) .light-pill:hover {
+  background-color: #edf3fc !important;
+}
+html:not(.dark) .light-bottom-nav {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  box-shadow: 0 -1px 12px rgba(10, 37, 64, 0.06);
+}
+</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-background font-body-md text-body-md text-on-surface flex flex-col min-h-screen antialiased selection:bg-secondary-container selection:text-on-secondary-container transition-colors duration-300"><input aria-hidden="true" class="sr-only" id="drawer-toggle" type="checkbox"/><header class="fixed top-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-xl border-b border-white/[0.04] transition-colors duration-300 light-header"><div class="h-16 px-gutter-mobile flex items-center justify-between"><label aria-label="Abrir Menu" class="w-10 h-10 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary transition-colors cursor-pointer select-none light-text-muted" for="drawer-toggle"><span class="material-symbols-outlined text-[22px]">menu</span></label><div class="flex items-center gap-space-sm"><div class="flex flex-col items-center"><span class="font-title-editorial text-[17px] tracking-wide text-primary light-accent font-medium">Para Sempre</span><span class="font-label-sm text-[10px] tracking-widest text-on-surface-variant/80 uppercase light-text-muted">Gustavo &amp; Dudinha</span></div></div><div class="flex items-center gap-1.5"><button aria-label="Alternar Modo Claro e Escuro" class="w-10 h-10 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary transition-colors cursor-pointer light-text-muted" id="theme-toggle-btn" title="Alternar tema"><span class="material-symbols-outlined text-[20px]" id="theme-toggle-icon">light_mode</span></button><img alt="Profile" class="w-7 h-7 rounded-full object-cover ring-1 ring-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCp0q3fTObQu0VwEziYOder42PMJBipzeR2A3n9Rkq8MZ4gdhhKwMmLnUXbUw9xmPEgSFWSj3cpZDLr245W0qUvin9yAP-mfzXwRlNCZuapL3hnXpZlU_4UuOgS1Yd3QyXs-ZjbT4vZY33sbjzCORskfIWhct4Q9gaxACH7eZaciwKoHs2ZIJtIA3MmooHiUMoImr0faEsNVpshz_-45mJViaPX9kdi27PgtFMrRpQ"/></div></div></header><div class="fixed inset-0 bg-surface-container-lowest/80 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300 ease-out" id="drawer-backdrop"></div><aside class="fixed top-0 left-0 bottom-0 w-[290px] max-w-[85vw] bg-surface-container-low/95 backdrop-blur-2xl z-50 flex flex-col justify-between -translate-x-full transition-transform duration-300 ease-out shadow-[0_20px_40px_-15px_rgba(1,14,33,0.9)] light-card border-r border-white/5" id="app-drawer"><div class="flex flex-col h-full"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_#ffb2b8]"></div><span class="font-title-editorial text-title-editorial text-primary light-accent">Nossa Galáxia</span></div><label aria-label="Fechar Menu" class="w-10 h-10 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface cursor-pointer select-none light-text-muted" for="drawer-toggle"><span class="material-symbols-outlined">close</span></label></div><div class="px-gutter-mobile py-space-sm"><div class="p-space-sm rounded-xl bg-surface-container/50 backdrop-blur-md flex items-center gap-space-sm light-subcard border border-white/5"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWOnbF1QN4OIr9rf7jgcAmjqGpmzsbF3s7VVi8Mdq8ZPMpu3Gzl3Fgy6rA5cPArIxwOhRIRg2ENIF6Oa1vaSA0KbyhBfeRAg-ry46es3QhVZx9mcdxmmjJ9xz8an2V7oMDQVmeWo7OUny6c0xR48aAx5ACY1dj0lPR6EZWsiCZKPzt4bS01r6ryWFATUdLSpZ53lYEFxVOfTQNabSfSYKFS7SvgU8YfjxwSlyHgbE"/><div class="flex flex-col overflow-hidden"><span class="font-label-md text-label-md text-on-surface truncate light-text-main">G &amp; D</span><span class="font-label-sm text-label-sm text-primary truncate light-accent">Santuário Privado</span></div></div></div><nav class="flex-1 overflow-y-auto px-gutter-mobile py-space-xs space-y-1"><a class="flex items-center gap-space-md h-11 px-space-md rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/40 transition-colors light-text-muted" data-path="inicio" href="#"><span class="material-symbols-outlined text-primary light-accent">home</span><span class="font-label-md text-label-md">Início</span></a><a class="flex items-center gap-space-md h-11 px-space-md rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/40 transition-colors light-text-muted" data-path="nossa-playlist" href="#"><span class="material-symbols-outlined text-primary light-accent">queue_music</span><span class="font-label-md text-label-md">Nossa Playlist</span></a><a class="flex items-center gap-space-md h-11 px-space-md rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/40 transition-colors light-text-muted" data-path="nossas-bandas" href="#"><span class="material-symbols-outlined text-primary light-accent">album</span><span class="font-label-md text-label-md">Nossas Bandas</span></a><a class="flex items-center gap-space-md h-11 px-space-md rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/40 transition-colors light-text-muted" data-path="nossas-fotografias" href="#"><span class="material-symbols-outlined text-secondary">photo_library</span><span class="font-label-md text-label-md">Nossas Fotografias</span></a><a class="flex items-center gap-space-md h-11 px-space-md rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/40 transition-colors light-text-muted" data-path="nossas-notas" href="#"><span class="material-symbols-outlined text-secondary">edit_note</span><span class="font-label-md text-label-md">Nossas Notas</span></a><a class="flex items-center gap-space-md h-11 px-space-md rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/40 transition-colors light-text-muted" data-path="cartinhas" href="#"><span class="material-symbols-outlined text-secondary">mail</span><span class="font-label-md text-label-md">Cartinhas</span></a><a class="flex items-center gap-space-md h-11 px-space-md rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/40 transition-colors light-text-muted" data-path="animes" href="#"><span class="material-symbols-outlined text-tertiary">auto_awesome</span><span class="font-label-md text-label-md">Animes</span></a><a class="flex items-center gap-space-md h-11 px-space-md rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/40 transition-colors light-text-muted" data-path="filmes" href="#"><span class="material-symbols-outlined text-tertiary">movie</span><span class="font-label-md text-label-md">Filmes</span></a><a class="flex items-center gap-space-md h-11 px-space-md rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/40 transition-colors light-text-muted" data-path="palavras-que-ficam" href="#"><span class="material-symbols-outlined text-primary light-accent">format_quote</span><span class="font-label-md text-label-md">Palavras que Ficam</span></a><a class="flex items-center gap-space-md h-11 px-space-md rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/40 transition-colors light-text-muted" data-path="mapa-de-sonhos" href="#"><span class="material-symbols-outlined text-primary light-accent">explore</span><span class="font-label-md text-label-md">Mapa de Sonhos</span></a></nav><div class="p-gutter-mobile pb-safe"><a class="flex items-center gap-space-md h-11 px-space-md rounded-lg text-on-error-container bg-error-container/20 hover:bg-error-container/40 transition-colors" data-path="sair" href="#"><span class="material-symbols-outlined text-error">logout</span><span class="font-label-md text-label-md">Encerrar Sessão</span></a></div></div></aside><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface flex-1 px-gutter-mobile transition-colors duration-300 light-surface"><div class="flex flex-col w-full pb-10 space-y-7">
+<!-- 1. Header de Boas-vindas Limpo e Arejado -->
+<section class="flex flex-col pt-4 space-y-1">
+<span class="font-label-sm text-[11px] text-primary light-accent uppercase tracking-widest">Área Privada</span>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight light-text-main">
+        Bem-vindo, <span class="italic text-primary light-accent">Darling.</span>
+</h1>
+<p class="font-body-md text-body-md text-on-surface-variant light-text-muted pt-0.5">
+        Nosso cantinho, nossas histórias.
+      </p>
+</section>
+<!-- 2. Cartão Poético em Destaque Minimalista -->
+<section class="relative overflow-hidden rounded-2xl bg-surface-container/60 border border-white/[0.04] p-5 shadow-sm transition-colors duration-300 light-card">
+<div class="flex flex-col space-y-2.5">
+<p class="font-title-editorial text-[18px] text-on-surface italic leading-relaxed light-text-main">
+        “Cada momento com você é uma lembrança que quero guardar para sempre.”
+      </p>
+<div class="flex items-center justify-end gap-1.5 pt-1">
+<span class="w-4 h-[1px] bg-primary/40"></span>
+<span class="font-label-sm text-[11px] text-primary light-accent font-medium">Com amor, Gustavo</span>
+</div>
+</div>
+</section>
+<!-- 3. Player "Tocando Agora" Compacto e Discreto -->
+<section class="flex flex-col space-y-2.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider light-text-muted">Tocando Agora</span>
+</div>
+<div class="rounded-2xl bg-surface-container/60 border border-white/[0.04] p-3.5 shadow-sm flex items-center justify-between gap-3.5 transition-colors duration-300 light-card">
+<div class="flex items-center gap-3 min-w-0 flex-1">
+<div class="relative w-12 h-12 rounded-xl overflow-hidden shrink-0 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Close up photograph of a vintage vinyl record player needle resting on an onyx black disc, moody dark cinematic sapphire lighting, atmospheric depth and luxury aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCs-ZPfmdlDB2osoi9SkYU8mSD_oNU3X1qgnYuAjwMI1XFrPyY18lr8lXzmlHin-i8Ug3dlefP93YSEm8_6JKEgu-HL-r58FO2kA04T55Q6ST1Gah8u2e7z94TjSfsczAKe-lIOdLElfpRi60I_j4tBQV82I2a6PqgsfXyBgMZSHvzXXMad2_tRV2qH55Nl6Z0muZ4HhOdWbxt1x6uaNKxrVx-7zbAqHQ0NNbb6StY"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-sm text-on-surface font-semibold truncate light-text-main">Apocalypse</span>
+<span class="font-body-sm text-xs text-on-surface-variant truncate light-text-muted">Cigarettes After Sex</span>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<div class="w-16 h-1 bg-surface-container-highest rounded-full overflow-hidden hidden sm:block">
+<div class="bg-primary light-accent h-full w-3/5 rounded-full" id="playback-bar"></div>
+</div>
+<button aria-label="Reproduzir" class="w-9 h-9 rounded-full bg-primary/15 text-primary light-accent hover:bg-primary/25 flex items-center justify-center transition-colors active:scale-95" id="audio-toggle-btn">
+<span class="material-symbols-outlined text-[20px]" id="audio-play-icon">pause</span>
+</button>
+</div>
+</div>
+</section>
+<!-- 4. Capítulos Compartilhados - Grade Minimalista & Sintética -->
+<section class="flex flex-col space-y-3">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-on-surface light-text-main">Capítulos</h2>
+</div>
+<div class="grid grid-cols-2 gap-2.5">
+<!-- Nossa Playlist -->
+<a class="flex items-center gap-3 p-3.5 rounded-xl bg-surface-container/50 border border-white/[0.03] hover:border-primary/20 active:scale-[0.99] transition-all light-card" data-path="nossa-playlist" href="#">
+<span class="material-symbols-outlined text-primary light-accent text-[20px]">queue_music</span>
+<span class="font-label-md text-sm text-on-surface font-medium truncate light-text-main">Playlist</span>
+</a>
+<!-- Nossas Bandas -->
+<a class="flex items-center gap-3 p-3.5 rounded-xl bg-surface-container/50 border border-white/[0.03] hover:border-primary/20 active:scale-[0.99] transition-all light-card" data-path="nossas-bandas" href="#">
+<span class="material-symbols-outlined text-primary light-accent text-[20px]">album</span>
+<span class="font-label-md text-sm text-on-surface font-medium truncate light-text-main">Bandas</span>
+</a>
+<!-- Fotografias -->
+<a class="flex items-center gap-3 p-3.5 rounded-xl bg-surface-container/50 border border-white/[0.03] hover:border-secondary/20 active:scale-[0.99] transition-all light-card" data-path="nossas-fotografias" href="#">
+<span class="material-symbols-outlined text-secondary text-[20px]">photo_library</span>
+<span class="font-label-md text-sm text-on-surface font-medium truncate light-text-main">Fotografias</span>
+</a>
+<!-- Nossas Notas -->
+<a class="flex items-center gap-3 p-3.5 rounded-xl bg-surface-container/50 border border-white/[0.03] hover:border-secondary/20 active:scale-[0.99] transition-all light-card" data-path="nossas-notas" href="#">
+<span class="material-symbols-outlined text-secondary text-[20px]">edit_note</span>
+<span class="font-label-md text-sm text-on-surface font-medium truncate light-text-main">Notas</span>
+</a>
+<!-- Cartinhas -->
+<a class="flex items-center gap-3 p-3.5 rounded-xl bg-surface-container/50 border border-white/[0.03] hover:border-secondary/20 active:scale-[0.99] transition-all light-card" data-path="cartinhas" href="#">
+<span class="material-symbols-outlined text-secondary text-[20px]">mail</span>
+<span class="font-label-md text-sm text-on-surface font-medium truncate light-text-main">Cartinhas</span>
+</a>
+<!-- Animes -->
+<a class="flex items-center gap-3 p-3.5 rounded-xl bg-surface-container/50 border border-white/[0.03] hover:border-tertiary/20 active:scale-[0.99] transition-all light-card" data-path="animes" href="#">
+<span class="material-symbols-outlined text-tertiary text-[20px]">auto_awesome</span>
+<span class="font-label-md text-sm text-on-surface font-medium truncate light-text-main">Animes</span>
+</a>
+<!-- Filmes -->
+<a class="flex items-center gap-3 p-3.5 rounded-xl bg-surface-container/50 border border-white/[0.03] hover:border-tertiary/20 active:scale-[0.99] transition-all light-card" data-path="filmes" href="#">
+<span class="material-symbols-outlined text-tertiary text-[20px]">movie</span>
+<span class="font-label-md text-sm text-on-surface font-medium truncate light-text-main">Filmes</span>
+</a>
+<!-- Palavras -->
+<a class="flex items-center gap-3 p-3.5 rounded-xl bg-surface-container/50 border border-white/[0.03] hover:border-primary/20 active:scale-[0.99] transition-all light-card" data-path="palavras-que-ficam" href="#">
+<span class="material-symbols-outlined text-primary light-accent text-[20px]">format_quote</span>
+<span class="font-label-md text-sm text-on-surface font-medium truncate light-text-main">Palavras</span>
+</a>
+<!-- Mapa de Sonhos (Full row minimal) -->
+<a class="col-span-2 flex items-center justify-between p-3.5 rounded-xl bg-surface-container/50 border border-white/[0.03] hover:border-primary/20 active:scale-[0.99] transition-all light-card" data-path="mapa-de-sonhos" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary light-accent text-[20px]">explore</span>
+<span class="font-label-md text-sm text-on-surface font-medium light-text-main">Mapa de Sonhos</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[18px] light-text-muted">chevron_right</span>
+</a>
+</div>
+</section>
+<!-- 5. Nossas Bandas em Pílulas / Cartões Limpos -->
+<section class="flex flex-col space-y-3">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-on-surface light-text-main">Nossas Bandas</h2>
+<a class="font-label-sm text-xs text-primary light-accent hover:underline" data-path="nossas-bandas" href="#">Ver todas</a>
+</div>
+<div class="grid grid-cols-2 gap-2.5">
+<!-- The Neighbourhood Card -->
+<div class="flex flex-col justify-between p-3 rounded-xl bg-surface-container/40 border border-white/[0.03] transition-colors duration-300 light-card">
+<div class="flex items-center gap-2.5">
+<img class="w-8 h-8 rounded-lg object-cover shrink-0" data-alt="Black and white artistic silhouette of an indie rock band" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCH28sBtT6I1mR5Ce-k-kdHIlaucPqTTUv20gfiFtZaH29EDpoCAwv77KERQq58En9swgNpLnDyODkZAUQ1bxQa5Xi5ebMl4qncFLxzf8bVV0R3rT0i3cC8QokBjxKG8cvFfW7Z2ARE0Cc1zAT1pF6aVU136IVLhCBnGWKcrmdNZg9Sm0GGkX5JUaUdp1yv2lHcnPEoAF8gE9vv5HFwkRqQs2KbyFRS6kXQ5PBqJjY"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-xs font-semibold text-on-surface truncate light-text-main">The NBHD</span>
+<span class="font-body-sm text-[10px] text-on-surface-variant truncate light-text-muted">Indie Rock</span>
+</div>
+</div>
+</div>
+<!-- Cigarettes After Sex Card -->
+<div class="flex flex-col justify-between p-3 rounded-xl bg-surface-container/40 border border-white/[0.03] transition-colors duration-300 light-card">
+<div class="flex items-center gap-2.5">
+<img class="w-8 h-8 rounded-lg object-cover shrink-0" data-alt="Dreamy minimalist monochrome portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHwhz4HTgvGoo1zSM6zej_4BALKfYeU_yaRGznqLojourO1S9FHFip642flVLd0SSO-MvM93FUKEaFrpTD4-USVIhjrYUcj6V7ZFlNXM7FX6gOFY0R18vVRBMgnVaSHZX04_r72M40xYRD4Ob-3j4oK-yobug8U3TRNaj_jrVr77PQQhnB9xZhPs8tYriEXf2hQYoWXbhdWALJ7kMASUVj094PVvBIpv7hOPREtj4"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-xs font-semibold text-on-surface truncate light-text-main">CAS</span>
+<span class="font-body-sm text-[10px] text-on-surface-variant truncate light-text-muted">Dream Pop</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. Seção Delicada e Suave de Encerramento -->
+<section class="py-8 flex flex-col items-center text-center space-y-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">favorite</span>
+<h3 class="font-headline-lg-mobile text-[24px] text-on-surface light-text-main font-normal">
+        Te amo, <span class="italic text-secondary">Dudinha.</span>
+</h3>
+<p class="font-body-sm text-on-surface-variant light-text-muted max-w-xs leading-relaxed italic text-[13px]">
+      “Você faz parte das minhas melhores histórias.”
+    </p>
+<span class="pt-2 text-[11px] text-on-surface-variant/60 light-text-muted tracking-wider uppercase font-label-sm">Gustavo &amp; Dudinha</span>
+</section>
+</div>
+<script>
+  (function() {
+    // 1. Audio toggle
+    const playBtn = document.getElementById('audio-toggle-btn');
+    const playIcon = document.getElementById('audio-play-icon');
+    let isPlaying = true;
+
+    if (playBtn && playIcon) {
+      playBtn.addEventListener('click', function() {
+        isPlaying = !isPlaying;
+        playIcon.textContent = isPlaying ? 'pause' : 'play_arrow';
+      });
+    }
+
+    // 2. Light / Dark Mode Toggle
+    const themeBtn = document.getElementById('theme-toggle-btn');
+    const themeIcon = document.getElementById('theme-toggle-icon');
+    const htmlElement = document.documentElement;
+
+    if (themeBtn && themeIcon) {
+      themeBtn.addEventListener('click', function() {
+        const isDark = htmlElement.classList.contains('dark');
+        if (isDark) {
+          htmlElement.classList.remove('dark');
+          themeIcon.textContent = 'dark_mode';
+          themeBtn.setAttribute('aria-label', 'Ativar Modo Escuro');
+        } else {
+          htmlElement.classList.add('dark');
+          themeIcon.textContent = 'light_mode';
+          themeBtn.setAttribute('aria-label', 'Ativar Modo Claro');
+        }
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/85 backdrop-blur-xl border-t border-white/[0.04] transition-colors duration-300 light-bottom-nav" data-active-classes="text-primary font-bold"><div class="flex justify-around items-center h-16 max-w-lg mx-auto px-space-sm"><a class="flex flex-col items-center justify-center w-12 h-12 text-primary light-accent transition-colors" data-path="inicio" href="#"><span class="material-symbols-outlined text-[22px]">home</span><span class="font-label-sm text-[10px] mt-0.5">Início</span></a><a class="flex flex-col items-center justify-center w-12 h-12 text-on-surface-variant hover:text-on-surface light-text-muted transition-colors" data-path="nossas-fotografias" href="#"><span class="material-symbols-outlined text-[22px]">photo_library</span><span class="font-label-sm text-[10px] mt-0.5">Fotos</span></a><a class="flex flex-col items-center justify-center w-12 h-12 text-on-surface-variant hover:text-on-surface light-text-muted transition-colors" data-path="cartinhas" href="#"><span class="material-symbols-outlined text-[22px]">favorite</span><span class="font-label-sm text-[10px] mt-0.5">Cartas</span></a><a class="flex flex-col items-center justify-center w-12 h-12 text-on-surface-variant hover:text-on-surface light-text-muted transition-colors" data-path="nossa-playlist" href="#"><span class="material-symbols-outlined text-[22px]">music_note</span><span class="font-label-sm text-[10px] mt-0.5">Músicas</span></a><a class="flex flex-col items-center justify-center w-12 h-12 text-on-surface-variant hover:text-on-surface light-text-muted transition-colors" data-path="mapa-de-sonhos" href="#"><span class="material-symbols-outlined text-[22px]">explore</span><span class="font-label-sm text-[10px] mt-0.5">Sonhos</span></a></div></nav></body></html>
