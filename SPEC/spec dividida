@@ -1,1 +1,67 @@
-
+PARA SEMPRE — Tarefas (divisão da spec)
+FASE 0 — FUNDAÇÃO E INFRAESTRUTURA
+ 0.1 Inicializar projeto Vite + React + React Router (estrutura de pastas da spec §18)
+ 0.2 Configurar Supabase: projeto, .env, .env.example, src/services/supabase.js (só URL + chave publicável no front)
+ 0.3 Provisionar as 2 contas no Supabase Auth (Darling e Dudinha) com cadastro público desabilitado
+ 0.4 Configurar Google Fonts (Playfair Display, Poppins, Great Vibes, Montserrat) e Lucide Icons — zero emojis na UI
+ 0.5 Baixar o logotipo para public/logo.png, com fallback de placeholder se não carregar
+FASE 1 — BANCO DE DADOS E SEGURANÇA (SUPABASE)
+ 1.1 Criar tabelas compartilhadas: musicas, artistas, lugares
+ 1.2 Criar tabelas individuais (com user_id): fotos, notas, cartas, animes, filmes, palavras
+ 1.3 Criar buckets no Supabase Storage (fotos, imagens)
+ 1.4 Escrever políticas RLS para todas as tabelas e buckets (compartilhadas: só os 2 usuários; individuais: só o dono)
+ 1.5 Seed da playlist inicial (10 vídeos da spec §4.3) e das 5 bandas iniciais (The Neighbourhood, Cigarettes After Sex, Arctic Monkeys, Charlie Brown Jr., Legião Urbana)
+ 1.6 Habilitar Supabase Realtime nas tabelas compartilhadas
+ 1.7 Versionar migrations SQL no repo (sem dados sensíveis)
+FASE 2 — AUTENTICAÇÃO
+ 2.1 src/services/auth.js: signIn, signOut, getSession, listener de sessão (persistente entre reloads)
+ 2.2 Tela /login: logo centralizado, título “Para Sempre”, subtítulo “Um lugar só nosso.”, campos, botão Entrar, ícone olho de senha, animações de entrada
+ 2.3 Erro genérico de credenciais + proteção contra tentativas excessivas (bloqueio progressivo) — nunca vazar credenciais
+ 2.4 Redirecionamento por usuário: Darling → /gustavo, Dudinha → /dudinha
+ 2.5 Rota protegida (guard): acesso direto sem login redireciona para /login
+ 2.6 Bloqueio cruzado: Gustavo não acessa /dudinha e vice-versa
+ 2.7 Botão “Sair” encerrando sessão e voltando ao login
+ 2.8 Confirmar: sem botão de cadastro, sem gerenciamento de usuários pela interface
+FASE 3 — LAYOUT E DESIGN SYSTEM
+ 3.1 Gerar as 14 interfaces no Stitch AI (desktop + mobile, tema azul e vermelho) antes de codar as telas
+ 3.2 global.css: tokens, cards arredondados, sombras suaves, transparências, loading, toasts de sucesso/erro, modal de confirmação de exclusão
+ 3.3 Temas gustavo.css (azul #071629/#0D223D/#4A90E2) e dudinha.css (vermelho #26090E/#3A1019/#C7475A) via variáveis CSS
+ 3.4 Header.jsx (logo, saudação, descrição, botão sair) + Sidebar.jsx retrátil com versão mobile
+ 3.5 Componentes genéricos reutilizáveis: Card, Modal, ConfirmDialog, EmptyState, Form de CRUD
+FASE 4 — FUNCIONALIDADES COMPARTILHADAS
+ 4.1 Nossa Playlist: MusicCard com miniatura e título, player embutido via YouTube IFrame API (sem abrir nova página), pausar/retomar, tratamento de vídeo com embed bloqueado
+ 4.2 Adicionar Música: validar URL do YouTube, extrair ID, pré-visualização, rejeitar links externos, playlist atualizada em tempo real nas duas contas
+ 4.3 Nossas Bandas: ArtistCard com imagem, nome e link open.spotify.com/search/NOME-DO-ARTISTA abrindo em nova guia
+ 4.4 Adicionar Artista: nome, URL de imagem, link Spotify opcional — aparece nas duas contas
+ 4.5 Nosso Mapa de Sonhos: CRUD com lugar, país, imagem, descrição, marcar visitado/desejo, visual de diário de viagem — compartilhado
+FASE 5 — FUNCIONALIDADES INDIVIDUAIS (CRUD por user_id)
+ 5.1 Nossas Fotografias: upload via Supabase Storage, legenda, data, galeria masonry com hover, lightbox ampliado, exclusão só do próprio autor
+ 5.2 Nossas Notas: criar, editar, excluir, título + conteúdo, data de criação, cartões
+ 5.3 Cartinhas: visual de papel, fontes elegantes, botão “Abrir cartinha” com animação de abertura, CRUD completo
+ 5.4 Animes que queremos assistir: capa, descrição opcional, marcar desejado/assistido, editar e excluir
+ 5.5 Filmes que queremos assistir: UI inspirada em streaming, pôsteres em destaque, status desejado/assistido, editar e excluir
+ 5.6 Palavras que ficam: frases e textos em cartões elegantes com animações, CRUD completo
+FASE 6 — PÁGINAS E MENSAGENS FINAIS
+ 6.1 Dashboard /gustavo: cards para todas as seções + “Cada momento com você é uma lembrança que quero guardar para sempre.”
+ 6.2 Dashboard /dudinha: cards para todas as seções + “Você é uma partes mais bonitas da minha história.” (mensagem exata: “Você é uma das partes mais bonitas da minha história.”)
+ 6.3 Mensagem final Gustavo: “Te amo, Dudinha.” + “Você faz parte das minhas melhores histórias.” — fundo diferenciado, animação discreta
+ 6.4 Mensagem final Dudinha: “Te amo, Darling.” + “Que a nossa história continue sendo escrita, um momento de cada vez.”
+ 6.5 Rotas próprias por seção (/gustavo/… e /dudinha/…) — multipage real, não abas
+FASE 7 — TESTES, DEPLOY E DOCUMENTAÇÃO
+ 7.1 Checklist funcional §20: 2 logins, redirecionamento, rotas protegidas, sair, sessão persistente
+ 7.2 Verificar dados compartilhados aparecendo nas duas contas e dados individuais separados
+ 7.3 Testar reprodução das músicas, adição de músicas, bandas e Spotify
+ 7.4 Testar uploads, CRUDs (notas, cartas, animes, filmes, palavras, lugares) e confirmação de exclusão
+ 7.5 Teste de responsividade (desktop, tablet, celular) e correções de UI
+ 7.6 Auditoria de segurança: RLS, rate limit de login, nenhuma senha/chave no repo (git grep)
+ 7.7 Deploy (GitHub Pages com fallback SPA ou Vercel) com env vars configuradas
+ 7.8 README.md: instalação, configuração do Supabase (Auth/DB/Storage/RLS), provisionamento das contas, deploy
+DEPENDÊNCIAS
+Fase 0 → Fase 1 → Fase 2 → Fase 3 → Fase 4 → Fase 6 → Fase 7
+Fase 3 → Fase 5 → Fase 6 (Fases 4 e 5 podem rodar em paralelo)
+Dentro da Fase 5, fazer Fotos primeiro (única com Storage + regra de autor)
+RISCOS
+GitHub Pages + SPA exige fallback de rotas; Vercel simplifica
+Vídeos do YouTube com embed desabilitado: tratar com mensagem amigável
+RLS: testar com as duas contas desde a Fase 1
+Logo externo (gstatic): baixar para public/, hotlink pode quebrar
